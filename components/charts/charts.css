@@ -1,0 +1,106 @@
+/* Common styles for both desktop and mobile */
+.charts_div_top {
+  display: flex;
+  margin: 1rem;
+  gap: 0.5rem;
+}
+
+.charts_div_top_section {
+  display: flex;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  gap: 0.5rem;
+  flex: 1 1 0%;
+  font-family: var(--font-family);
+
+  justify-content: center;
+  border-radius: 0.25rem;
+  width: 4rem;
+  background-color: #374151;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.charts_div_middle_section p {
+  width: 30%;
+
+}
+.charts_div_top_title {
+  font-weight: 700;
+  color: var(--disabled-color);
+  text-align: flex-start;
+  margin-top: 2%;
+  margin-bottom: 5%;
+
+}
+
+.charts_div_top_content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.charts_div_top_tendance {
+  color: #6EE7B7;
+}
+
+.charts_div_middle {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.75rem;
+}
+
+.charts_div_middle_section {
+  border-radius: 0.25rem;
+  width: 50%;
+  background-color: #374151;
+  height: 42vh;
+}
+
+.charts_div_middle_title {
+  font-weight: 700;
+  color: #6EE7B7;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.charts_div_foot {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.charts_div_foot_section {
+  border-radius: 0.25rem;
+  width: 33.333333%;
+  background-color: #374151;
+  height: 35vh;
+}
+
+/* Hide sidebar and stack sections in a column for mobile */
+@media (max-width: 950px) {
+  .charts_div_top {
+    flex-direction: column;
+  }
+  .charts_div_top_section {
+    width: 100%; /* Full width for mobile */
+  }
+  .charts_div_middle,
+  .charts_div_foot {
+    flex-direction: column;
+  }
+  .charts_div_middle_section,
+  .charts_div_foot_section {
+    width: 100%; /* Full width for mobile */
+  }
+}
+

@@ -1,0 +1,496 @@
+/* MAIN */
+
+.main {
+  width: 85%;
+  margin-top: 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 10%;
+}
+/* FIRST DIV */
+
+
+.firstdiv {
+  position: relative;
+  display: flex;
+  flex-direction: row; /* Display title and image side by side on larger screens */
+  align-items: center;
+  text-align: center;
+  font-family: Playfair Display, sans-serif;
+  margin-left: 10%;
+}
+
+.firstdivimage {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-left: 10vw;
+
+}
+
+.firstimage {
+  /* border-radius: 5%; */
+  max-width: 100%;
+  height: auto;
+
+
+}
+
+.firstdivtitle {
+  max-width: 60%; /* Adjust the maximum width as needed */
+  padding: 10px; /* Spacing around the title */
+  border-radius: 5px; /* Rounded corners */
+  color: #e5eae8; /* Text color */
+  text-shadow: 4px 4px 8px 0px rgba(3, 15, 23, 0.5); 
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Adjust the left position as needed to overlap the image */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the title appears on top of the image */
+}
+
+.firstdivtitle h1 {
+  font-size: 6.5vw;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+/* Mobile first div */
+@media (max-width: 1080px) {
+
+  .firstdiv {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+  .firstdivtitle {
+    width: 100%; /* Full width on mobile screens */
+    max-width: 100%; /* Remove max-width */
+    margin: 0; /* Reset margin */
+    border-radius: 0; /* Remove border-radius */
+    padding: 5px; /* Adjust padding as needed */
+    position: absolute; /* Reset position */
+    top: 1; /* Reset top position */
+    left: 0; /* Reset left position */
+    transform: none; /* Reset transform */
+
+    
+  }
+
+  .firstdivtitle h1 {
+    font-size: 8vw;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+
+  }
+
+  .firstdivimage {
+    margin-left: 0%;
+    width: 100%; /* Center the image */
+  }
+
+}
+
+/* Laptop screens */
+@media (min-width: 850px) and (max-width: 1024px) {
+  .firstdivtitle {
+    max-width: 80%; /* Adjust the maximum width as needed */
+    left: 0; /* Position the title at the left edge of the image */
+  }
+}
+
+/* SECOND DIV */
+
+.seconddiv {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  font-family: Hind;
+}
+
+.seconddivimage {
+  z-index: 1;
+}
+
+.secondimage {
+  margin-top: 25%;
+  margin-left: 25%;
+}
+
+.seconddiv div article {
+  background-color: #def2eb;
+  width: 50vw;
+  height: 70vh;
+  top: 0;
+  right: 0;
+  word-break: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.seconddiv div article h3 {
+  margin-left: 25%;
+  font-weight: bold;
+  font-size: 3vw;
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  padding-top: 15%;
+}
+
+.seconddiv div article p {
+  /* max-width: 600px; */
+  text-align: justify;
+  color: rgba(16, 24, 24, 0.4);
+  margin-top: 5%;
+  margin-left: 25%;
+  font-family: var(--font-body);
+  margin-right: 5%;
+}
+
+.seconddiv div article section {
+  margin-left: 25%;
+  max-width: 600px;
+  text-align: justify;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding-top: 5%;
+  margin-right: 5%;
+
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 1080px) {
+  .seconddiv {
+    flex-direction: column; 
+  }
+
+  .seconddivimage {
+    margin: 0 auto; 
+  }
+
+  .secondimage {
+    margin-top: 5%; 
+    margin-left: 0; 
+    max-width: 100%; 
+    height: auto; /* Laissez la hauteur s'ajuster automatiquement en conservant le ratio */
+  }
+
+  .seconddiv div article {
+    width: 100%; 
+    height: auto; 
+    margin: 0; 
+    padding: 5%; 
+  }
+
+  .seconddiv div article h3 {
+    margin-left: 0; 
+    font-size: 4vw; 
+    text-align: center; 
+  }
+
+  .seconddiv div article p {
+    max-width: 100%; /* Ajustez la largeur maximale du paragraphe pour s'adapter à l'écran */
+    margin-top: 5%;
+    margin-left: 0; /* Centrez le texte horizontalement */
+  }
+}
+/* THIRD DIV */
+
+/* Styles for desktop screens */
+.thirddiv {
+  display: flex;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+.firstaccent {
+  width: 15vw;
+  height: 16vw;
+  background-color: var(--secondary-color);
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 1.5vw;
+  margin-top: 20%;
+  padding: 2%;
+  padding-top: 3.5%;
+  text-align: center;
+  z-index: 1;
+  /* margin-left: 15%; */
+  margin-right: -15%;
+  padding: 2%;
+}
+
+.thirddiv div article {
+  background-color: #def2eb;
+  width: 50vw;
+  height: 50vh;
+  top: 0;
+  right: 0;
+}
+
+.thirddiv div article h3 {
+  display: flex;
+  justify-content: right;
+  margin-right: 10%;
+  font-weight: bold;
+  font-size: 1.7vw;
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  padding-top: 10%;
+}
+
+.thirddiv div article p {
+  max-width: 60vw;
+  text-align: justify;
+  color: rgba(16, 24, 24, 0.4);
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-right: 5%;
+  font-family: var(--font-body);
+}
+
+@media (min-width: 1081px) {
+  .thirddiv .iconlist {
+    display: flex;
+    margin-top: 45vh;
+    margin-left: -45vh;
+  }
+}
+
+
+/* Styles for mobile screens */
+@media (max-width: 1080px) {
+  .thirddiv {
+    flex-direction: column; /* Arrange elements in a column for mobile screens */
+    align-items: center; /* Center horizontally */
+    margin-left: 0;
+  }
+
+  .firstaccent {
+    width: 100%; /* Take up the full width of the screen */
+    height: auto; /* Auto height based on content */
+    margin: 0; /* Reset margins */
+    padding: 5%; /* Add spacing around content */
+    text-align: center; /* Center text */
+  }
+
+  .thirddiv div article {
+    width: 100%; /* Article takes up full screen width */
+    height: auto; /* Auto height based on content */
+    margin: 0; /* Reset margins */
+    padding: 5%; /* Add spacing around content */
+  }
+
+  .thirddiv div article h3 {
+    margin-right: 0; /* Reset margin */
+    font-size: 4vw; /* Adjust font size for mobile screens */
+    text-align: center; /* Center text */
+  }
+
+  .thirddiv div article p {
+    max-width: 100%; /* Adjust maximum paragraph width to fit the screen */
+    margin-top: 5%;
+    margin-left: 0; /* Center text horizontally */
+  }
+
+  .iconlist {
+    display: flex;
+    flex-direction: row; /* Arrange icons in a row */
+    justify-content: space-evenly; /* Distribute icons evenly */
+    align-items: center; /* Center vertically */
+    left: 0;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .iconlist img {
+    width: 100%; /* Set a relative width for the icons */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}
+
+
+
+
+/* ==================== MOBILE ============================== */
+@media(max-width: 850px){
+  .main {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0%;
+  }
+}
+
+/* ==================== PAGE CONTACT ============================== */
+
+.contact {
+  padding-top: 5%;
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact article {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  color: #a4dcc8;
+}
+
+.contact article h3 {
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 45px;
+  padding: 5%;
+}
+
+.contact article p {
+  margin-left: 5%;
+  font-family: var(--font-body);
+  font-size: 20px;
+}
+
+.contact form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input {
+  width: 100%;
+  height: 2.5rem;
+  max-width: 850px;
+  background-color: #def2eb;
+  color: var(--primary-color);
+  padding: 5px;
+  border-radius: 5%;
+}
+
+.contact form p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.contact form select {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 2%;
+  background-color: #def2eb;
+  color: var(--primary-color);
+  border-radius: 5%;
+}
+
+.contact form textarea {
+  background-color: #def2eb;
+  color: var(--primary-color);
+}
+
+.contact form button {
+  padding: 15px;
+  margin-top: 5%;
+  background-color: var(--secondary-color);
+}
+
+.contact form button input {
+  background-color: var(--secondary-color);
+}
+
+/* ====================== Page Connexion ================= */
+
+.loginheader {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.loginpage main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  color: var(--secondary-color);
+}
+
+.loginpage main form {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.loginpage main form input {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #def2eb;
+  padding-left: 2%;
+}
+
+.loginpage main form p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 20px;
+  font-family: var(--font-body);
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.loginpage main form cite {
+  color: lightgray;
+  margin-top: 2%;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.loginpage main form button {
+  margin-top: 5%;
+  padding: 2% 0%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  font-family: var(--font-body);
+  font-size: 20px;
+}
+
+.loginpage footer p:not(:last-child) {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-top: 2%;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 200;
+  justify-content: center;
+}
+
+.loginpage footer p:not(:first-child) {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  font-weight: bold;
+  font-family: var(--font-body);
+  font-size: 20px;
+  justify-content: center;
+  color: #a4dcc8;
+}

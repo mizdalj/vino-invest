@@ -1,0 +1,204 @@
+/* Common styles for both landscape and portrait */
+
+.container {
+  /* it has to take all the screen */
+  width: 100%;
+  height: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: Hind;
+}
+
+.header {
+  background-color: #101818;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+}
+
+.header nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  color: #def2eb;
+}
+
+/* Normal button style */
+.btn_header {
+  display: inline-block;
+  width: 12vw;
+  padding: 20px 30px;
+  border: none; /* Remove default button border */
+  background-color: transparent; /* No background color */
+  position: relative;
+  color: #def2eb;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden; /* Clip the border animation */
+  font-size: 1.2vw;
+  font-family: Hind;
+}
+
+/* Button borders (initial state) */
+.btn_header::before,
+.btn_header::after {
+  content: "";
+  position: absolute;
+  left: 0; /* Start position on the left */
+  width: 0;
+  height: 2px;
+  color: #3da680;
+  background-color: #3da680; /* Highlight color */
+  transition: width 0.6s; /* Transition the width property */
+}
+
+/* Top border */
+.btn_header::before {
+  top: 0;
+}
+
+/* Bottom border */
+.btn_header::after {
+  bottom: 0;
+}
+
+/* Button hover state */
+.btn_header:hover::before,
+.btn_header:hover::after {
+  width: 100%; /* Expand the width to the right */
+}
+.btn_header:hover {
+  color: #3da680;
+}
+
+/* LOgin button  */
+.btn_green {
+  display: inline-block;
+  width: 12vw;
+  height: 3.5vw;
+  margin: 0.5vw;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2vw;
+  color: #fff;
+  background-color: #3da680;
+  background-image: linear-gradient(to right, #3da680, #1e704f);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  font-family: Hind;
+}
+
+.btn_green a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn_green:hover {
+  background: rgb(68, 185, 143);
+  background: radial-gradient(
+    circle,
+    rgba(68, 185, 143, 0.8127626050420168) 0%,
+    rgba(61, 166, 128, 1) 35%,
+    rgba(30, 112, 79, 1) 100%
+  );
+}
+
+.menu_icon {
+  display: none;
+}
+
+.mobile_menu {
+  display: none;
+}
+
+/* MEDIA QUERIES FOR MOBILE AND TABLET */
+@media (max-width: 1024px) {
+
+
+  .menu_icon {
+    display: block;
+    cursor: pointer;
+    width: 70%;
+    height: auto;
+
+  }
+
+  .mobile_menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #101818;
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile_menu .header_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    height: 6vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .mobile_menu .header_mobile .nav_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+  }
+
+  .nav_mobile {
+    width: 100%;
+  }
+
+  .btn_mobile {
+    padding: 20px 30px;
+    width: 100%;
+    border: none;
+    text-align: left; /* Align buttons to the left */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
+    color: #fff;
+    background-color: #101818; /* Background color for mobile buttons */
+    color: #def2eb;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn_mobile:hover {
+    background-color: #3da680;
+    width: 100%;
+  }
+
+  .btn_mobile a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
